@@ -9,6 +9,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { AuthContext } from "./helpers/AuthContext";
 import PageNotFound from "./pages/PageNotFound";
+import Profile from "./pages/Profile";
+import ChangePassword from "./pages/ChangePassword";
 
 function App() {
   const [authState, setAuthState] = useState({
@@ -59,8 +61,8 @@ function App() {
             )}
             <div />
             <div className="loggedInContainer">
-              {authState.status && <button onClick={logout}>Logout</button>}
               <h1>{authState.username} </h1>
+              {authState.status && <button onClick={logout}>Logout</button>}
             </div>
           </div>
           <Routes>
@@ -69,6 +71,8 @@ function App() {
             <Route exact path="/post/:id" element={<Post />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/registration" element={<Registration />} />
+            <Route exact path="/profile/:id" element={<Profile />} />
+            <Route exact path="/changepassword" element={<ChangePassword />} />
             <Route exact path="*" element={<PageNotFound />} />
           </Routes>
         </Router>
