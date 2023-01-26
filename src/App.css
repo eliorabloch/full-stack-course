@@ -1,5 +1,5 @@
 .App {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@ body {
 .post .title {
   flex: 20%;
   border-bottom: 1px solid lightgray;
-  background-color: rgb(21, 80, 138);
+  background-color: dodgerblue;
   display: grid;
   place-content: center;
   color: white;
@@ -49,10 +49,32 @@ body {
   display: flex;
   align-items: center;
   padding-left: 15px;
-  background-color: rgb(21, 80, 138);
+  background-color: dodgerblue;
   color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.footer .username {
+  flex: 50%;
+}
+.footer .buttons {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.likeBttn {
+  color: rgba(250, 250, 250, 0.8);
+}
+.unlikeBttn {
+  color: white;
+}
+
+.buttons label {
+  margin-right: 20px;
+  margin-left: 10px;
 }
 
 /* CREATE POST PAGE CSS */
@@ -72,7 +94,7 @@ body {
   width: 500px;
   height: auto;
   padding: 20px;
-  border: 5px solid rgb(21, 80, 138);
+  border: 5px solid dodgerblue;
   border-radius: 5px;
 }
 
@@ -90,14 +112,14 @@ body {
   margin-top: 15px;
   height: 40px;
   border: none;
-  background-color: rgb(21, 80, 138);
+  background-color: lightskyblue;
   border-radius: 5px;
   color: white;
 }
 
 .formContainer button:hover {
   cursor: pointer;
-  background-color: rgb(21, 80, 138);
+  background-color: dodgerblue;
 }
 
 span {
@@ -109,16 +131,44 @@ span {
 .navbar {
   width: 100%;
   height: 70px;
-  background-color: rgb(21, 80, 138);
+  background-color: dodgerblue;
   display: flex;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+.navbar .links {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
+.navbar .loggedInContainer {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .navbar a {
   margin-left: 20px;
   text-decoration: none;
   color: white;
+}
+
+.navbar button {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.navbar h1 {
+  text-align: right;
+  margin-right: 10px;
+  color: white;
+  font-weight: lighter;
 }
 
 /* INDIVIDUAL POST */
@@ -162,12 +212,12 @@ button {
 }
 
 .addCommentContainer button {
-  background-color: rgb(21, 80, 138);
+  background-color: dodgerblue;
   color: white;
 }
 
 .addCommentContainer input {
-  border: 2px solid rgb(21, 80, 138);
+  border: 2px solid dodgerblue;
 }
 
 .rightSide .listOfComments {
@@ -222,10 +272,10 @@ button {
 }
 
 .loginContainer button {
-  background-color: rgb(21, 80, 138);
+  background-color: dodgerblue;
   color: white;
 }
 
 .loginContainer input {
-  border: 2px solid rgb(21, 80, 138);
+  border: 2px solid dodgerblue;
 }
